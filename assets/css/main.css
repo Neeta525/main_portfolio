@@ -1140,9 +1140,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1655,4 +1658,107 @@ input, select, textarea {
 
 		body.is-preload #footer {
 			opacity: 0;
+		}
+
+		/* #contact {
+			border-bottom: 1px solid rgb(0, 0, 0);
+			height: 20vh;
+			text-align: center;
+			position: relative;
+			background-color: grey;
+		} */
+		.icons {
+			display: inline-flex;
+			list-style: none;
+		}
+		.icons .icon {
+			position: relative;
+			background: rgb(71, 70, 70);
+			border-radius: 50%;
+			padding: 15px;
+			margin: 10px;
+			width: 50px;
+			height: 50px;
+			font-size: 18px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+			transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		}
+		.icons .tooltip {
+			position: absolute;
+			top: 0;
+			font-size: 14px;
+			background: #ffffff;
+			color: #000000;
+			padding: 5px 8px;
+			border-radius: 5px;
+			box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+			opacity: 0;
+			pointer-events: none;
+			transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		}
+		  
+		.icons .tooltip::before {
+			position: absolute;
+			content: "";
+			height: 8px;
+			width: 8px;
+			background: #ffffff;
+			bottom: -3px;
+			left: 50%;
+			transform: translate(-50%) rotate(45deg);
+			transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		}
+		  
+		.icons .icon:hover .tooltip {
+			top: -45px;
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+		.icons .icon:hover span,
+		.icons .icon:hover .tooltip {
+			text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+			
+		}
+		.icons .facebook:hover,
+		.icons .facebook:hover .tooltip,
+		.icons .facebook:hover .tooltip::before {
+			background: #1877F2;
+			color: #ffffff;
+			
+		}
+		.icons .instagram:hover,
+		.icons .instagram:hover .tooltip,
+		.icons .instagram:hover .tooltip::before {
+		  background: #E4405F;
+		  color: #ffffff;
+		}
+		.icons .twitter:hover,
+		.icons .twitter:hover .tooltip,
+		.icons .twitter:hover .tooltip::before {
+		  background: #1DA1F2;
+		  color: #ffffff;
+		}
+		.icons .github:hover,
+		.icons .github:hover .tooltip,
+		.icons .github:hover .tooltip::before {
+		  background: #5e1d94;
+		  color: #ffffff;
+		}
+		.icons .linkedin:hover,
+		.icons .linkedin:hover .tooltip,
+		.icons .linkedin:hover .tooltip::before {
+		  background: #1c6894;
+		  color: #ffffff;
+		}
+		.icons .people:hover,
+		.icons .people:hover .tooltip,
+		.icons .people:hover .tooltip::before {
+		  background: #28941c;
+		  color: #ffffff;
 		}
